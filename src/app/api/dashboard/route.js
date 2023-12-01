@@ -10,7 +10,7 @@ import { headers } from "next/headers"; //middleware a use kora jay na
 
 //     return NextResponse.json(searchParams.get('name'));
 //     // return NextResponse.json({data:searchParams.get('name')});
-//     // return NextResponse.json({status:"success",msg:"what?"}, {status:201}); //203
+//     // return NextResponse.json({status:"success",msg:"what?"}, {status:201}); //203 //object pathaitesi as JS
 // }
 
 
