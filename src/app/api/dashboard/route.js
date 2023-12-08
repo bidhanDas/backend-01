@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
-import { headers } from "next/headers"; //middleware a use kora jay na
+import { headers } from "next/headers"; //-----middleware a use kora jay na-----
 
 
 
@@ -45,20 +45,20 @@ import { headers } from "next/headers"; //middleware a use kora jay na
 
 //     return NextResponse.json({data:x.get('token')});
 
-//     // return NextResponse.json({data:x.get('email')}); //middleware a ashe add hoyeche
+//     // return NextResponse.json({data:x.get('email')}); //-----middleware a ashe add hoyeche-----
 // }
 
 
 
-// DELETE
-export async function DELETE(req,res){
-    //cookies
-    const x = req.cookies.get('Cookie_1');
+// // DELETE
+// export async function DELETE(req,res){
+//     //cookies
+//     const x = req.cookies.get('Cookie_1');
 
-    return NextResponse.json({data:x}); //{"name": "Cookie_1","value": "value"}
-    // return NextResponse.json({data:x.name}); 
-    // return NextResponse.json({data:x.value});
-}
+//     return NextResponse.json({data:x}); //{"name": "Cookie_1","value": "value"}
+//     // return NextResponse.json({data:x.name}); 
+//     // return NextResponse.json({data:x.value});
+// }
 
 
 

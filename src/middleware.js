@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(req,res){
 
+    //path specific
     //before login
     if(req.nextUrl.pathname.startsWith("/api/site")){
         //no Auth check
@@ -10,26 +11,26 @@ export function middleware(req,res){
     }
 
 
-    // //after login
-    // //headers
-    // if(req.nextUrl.pathname.startsWith("/api/dashboard")){
-    //     //Auth check
-    //     const x = new Headers(req.headers);
-    //     if(x.get('token')==='ABC-123'){
+    //after login
+    //headers
+    if(req.nextUrl.pathname.startsWith("/api/dashboard")){
+        //Auth check
+        const x = new Headers(req.headers);
+        if(x.get('token')==='ABC-123'){
 
-    //         //set user identity in header
-    //         x.set("email","264cat@gmail.com"); //token 'Decode' kore mail ta pabo
+            //set user identity in header
+            x.set("email","264cat@gmail.com"); //token 'Decode' kore mail ta pabo
 
-    //         return NextResponse.next(
-    //             {
-    //                 request:{headers:x}
-    //             }
-    //         );
-    //     }
-    //     else{
-    //         return NextResponse.json({msg:"Unauthorized"},{status:401});
-    //     }
-    // }
+            return NextResponse.next(
+                {
+                    request:{headers:x}
+                }
+            );
+        }
+        else{
+            return NextResponse.json({msg:"Unauthorized"},{status:401});
+        }
+    }
 
 
 
