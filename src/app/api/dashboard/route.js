@@ -41,7 +41,7 @@ export async function PUT(req,res){
 // PATCH
 export async function PATCH(req,res){
     //headers
-    const x = headers();
+    const x = headers(); //header take dhorlam, header vitore cookie tar vitore token
 
     return NextResponse.json({data:x.get('token')});
 
@@ -53,9 +53,9 @@ export async function PATCH(req,res){
 // DELETE
 export async function DELETE(req,res){
     //cookies
-    const x = req.cookies.get('Cookie_1');
+    const x = req.cookies.get('Cookie_1'); //cookie ta dhorlam
 
-    return NextResponse.json({data:x}); //{"name": "Cookie_1","value": "value"}
+    return NextResponse.json({data:x}); // but {"name": "Cookie_1","value": "value"}
     // return NextResponse.json({data:x.name}); 
     // return NextResponse.json({data:x.value});
 }
